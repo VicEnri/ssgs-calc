@@ -25,9 +25,9 @@ Questo progetto è una semplice calcolatrice da riga di comando sviluppata in No
 
 1. Clona il repository
 2. Installa le dipendenze:
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
 ## Test
 
@@ -75,9 +75,9 @@ Time:        1.234s
 ## Esempio di utilizzo
 
 1. Avvia il programma:
-   ```bash
-   node app.js
-   ```
+```bash
+node app.js
+```
 
 2. Seleziona un'operazione dal menu (es. 1 per l'addizione o 5 per la potenza).
 3. Inserisci i numeri richiesti.
@@ -99,3 +99,23 @@ Dopo ogni operazione, il programma torna al menu principale, consentendo all'ute
 - `app.js`: File principale che gestisce l'interazione con l'utente.
 - `calculator.js`: Modulo che contiene le funzioni matematiche.
 - `calculator.test.js`: File di test per verificare la correttezza delle funzioni matematiche.
+
+## Pipeline CI
+### Trigger
+
+La pipeline si attiva su:
+
+- `Push` al branch main
+- `Pull request` verso il branch main
+
+### Job test 
+
+Questo job viene eseguito su un ambiente ubuntu-latest.
+
+### Steps
+- `Checkout repository:` Usa l'azione actions/checkout@v3 per clonare il repository.
+- `Setup Node.js:` Usa l'azione actions/setup-node@v3 per installare Node.js versione 16.
+- `Install dependencies:` Esegue npm install per installare le dipendenze del progetto.
+- `Run tests:` Esegue npm test per eseguire i test definiti nel progetto.
+- `Generate coverage report:` Esegue npx jest --coverage per generare un report di copertura dei test.
+- `Upload coverage report:` Usa l'azione actions/upload-artifact@v4 per caricare il report di copertura generato nella directory coverage/.
