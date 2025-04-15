@@ -23,12 +23,7 @@ Questo progetto è una semplice calcolatrice da riga di comando sviluppata in No
 
 ## Installazione
 
-1. Clona il repository:
-   ```bash
-   git clone https://github.com/tuo-utente/ssgs-calc.git
-   cd ssgs-calc
-   ```
-
+1. Clona il repository
 2. Installa le dipendenze:
    ```bash
    npm install
