@@ -1,4 +1,4 @@
-const { add, subtract, multiply, divide, power } = require('./calculator');
+const { add, subtract, multiply, divide, power } = require('../src/calculator');
 
 describe('Calculator Functions', () => {
     test('add() should return the sum of two numbers', () => {
