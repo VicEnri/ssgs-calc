@@ -19,7 +19,7 @@ Questo progetto è una semplice calcolatrice da riga di comando sviluppata in No
 
 ## Requisiti
 
-- **Node.js**: Versione 14 o superiore.
+- **Node.js**: Versione 18 o superiore.
 
 ## Installazione
 
