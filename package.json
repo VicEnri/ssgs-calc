@@ -4,7 +4,7 @@
   "description": "SSGS Calc è una semplice calcolatrice da riga di comando sviluppata in Node.js. Questo progetto è stato creato per fornire un'applicazione interattiva che consente agli utenti di eseguire operazioni matematiche di base e avanzate direttamente dal terminale.",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage --verbose"
   },
   "repository": {
     "type": "git",
