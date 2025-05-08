@@ -76,7 +76,7 @@ Time:        1.234s
 
 1. Avvia il programma:
 ```bash
-node app.js
+npm start
 ```
 
 2. Seleziona un'operazione dal menu (es. 1 per l'addizione o 5 per la potenza).
