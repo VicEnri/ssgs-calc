@@ -50,14 +50,7 @@ npm test
 ```
 Jest eseguirà tutti i test definiti nel file `calculator.test.js` e mostrerà un riepilogo dei risultati, indicando quali test sono passati e quali sono falliti.
 
-### Verifica della copertura dei test
-
-Per eseguire i test e verificare la copertura, utilizza il comando:
-```bash
-npx jest --coverage
-```
-
-Dovrebbe generare il seguente output:
+I Test dovrebbero generare il seguente output:
 ```
 PASS  ./calculator.test.js
 ----------------|---------|----------|---------|---------|-------------------
@@ -108,9 +101,11 @@ La pipeline si attiva su:
 - `Push` al branch main
 - `Pull request` verso il branch main
 
-### Job test 
+### Configurazione
 
-Questo job viene eseguito su un ambiente ubuntu-latest.
+La pipeline utilizza:
+- **actions/setup-node@v4** per configurare Node.js.
+- **Node.js 20.x**, una versione LTS attualmente supportata.
 
 ### Steps
 - `Checkout repository:` Usa l'azione actions/checkout@v3 per clonare il repository.
